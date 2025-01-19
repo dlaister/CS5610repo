@@ -1,1 +1,133 @@
+<!--Task 1: Page Template with Grid-->
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid Layout Example</title>
+
+  <style>
+     /* Grid Container Style and Structure */
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "leftBar mainContent rightBar"
+        "footer footer footer";
+      /* fr (fraction) of the defined space, 1x, 4x, 1x */
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-rows: 1fr 4fr 1fr;
+      gap: 3px;
+      background-color: black;
+      padding: 3px;
+    }
+
+    /* Style For Grid div Elements*/
+    .container > div {
+      background-color: green;
+      padding: 10px;
+      border: 1px solid red;
+    }
+
+    .header {
+      grid-area: header;
+      display: flex;
+      /* Align To Horizontally */
+      justify-content: center;
+      /* Align Vertically */
+      align-items: center;
+      /*text-align: center;*/
+    }
+
+    .leftBar {
+      grid-area: leftBar;
+    }
+
+     /* Hide ul li Content In leftBar*/
+     .leftBar ul li {
+       visibility: hidden;
+     }
+
+    .mainContent {
+      grid-area: mainContent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rightBar {
+      grid-area: rightBar;
+      /* Add Style Elements Here */
+    }
+
+    .footer {
+      grid-area: footer;
+      text-align: center;
+    }
+
+    /* Task 2: Transition and Hover */
+    /* Hover Box (Small) with .5 sec transition */
+    .hoverAndTransition {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      margin: auto;
+      /* The Transition Effect */
+      transition: all 0.5s ease;
+    }
+
+    /* Hover Box (Large) */
+    .hoverAndTransition:hover {
+      width: 120px;
+      height: 120px;
+      background-color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <h1>Derek's Website</h1>
+  </div>
+
+  <!-- Left Sidebar -->
+  <div class="leftBar">
+    <ul>
+      <li><a href="https://www.google.com/">Home Page</a><br></li>
+      <li><a href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Photos</a><br></li>
+      <li><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Secret Project</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="mainContent">
+    <div class="hoverAndTransition"></div>
+  </div>
+
+  <!-- Right Sidebar -->
+  <div class="rightBar">
+    <!-- Content Here -->
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <!-- Content Here -->
+  </div>
+
+</div>
+</body>
+
+</html>
+
+<!-- Resources used:
+Grid (basis for MA, modified for MA params): https://www.w3schools.com/css/css_grid.asp
+Flex Box: https://www.w3schools.com/css/css3_flexbox.asp
+-->
 

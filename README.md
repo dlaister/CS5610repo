@@ -1,2 +1,4 @@
 # CS5610
-CS5610 Web Dev
+This is a test site for CS5610 Web Dev.
+
+Files will be store according to class guidelines. 
